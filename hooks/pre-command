@@ -1,1 +1,10 @@
+#!/bin/bash
 
+# Set custom environment variable
+export CUSTOM_ENV_VAR="custom_value"
+
+# Set internal build number using BUILDKITE_BUILD_NUMBER and BUILDKITE_BRANCH
+export INTERNAL_BUILD_NUMBER="${BUILDKITE_BUILD_NUMBER}-${BUILDKITE_BRANCH}"
+
+echo "Custom environment variable set: $CUSTOM_ENV_VAR"
+echo "Internal build number set: $INTERNAL_BUILD_NUMBER"
